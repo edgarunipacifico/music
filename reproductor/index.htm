@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=>
+
+<head>
+  <title>music+</title>
+  <meta name="description" content="escucha las canciones más buscada en google tarareando  , conoce cuales son los artistas más googleados  y los videos más visto en youtube  ">
+  <link rel="canonical"  href="https://edgarunipacifico.github.io/taller-practico-music+/dom-ejercicio
+">
+  <link rel="shortcut icon" href="./assets/portatil_opt.svg">
+    <link rel="apple-touch-icon" href="./assets/portatil_opt.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://allfont.es/allfont.css?fonts=ds-digital" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/0f37ecef13.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/hamburgers-master/dist/hamburgers.css">
+  <link href="css/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reproductor.css">
+
+    <meta name="theme-color" content="10d10c">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:title" name="twitter:title" content="escucha las canciones más buscadas tarareando en Google, soy Edgar Riascos, Desarrollador Web">
+    <meta property="og:description" name="twitter:description"
+      content="escucha las canciones más buscadas tarareando en Google, soy Edgar Riascos, Desarrollador Web">
+    <meta property="og:image" name="twitter:image"
+      content="https://edgarunipacifico.github.io/taller-practico-music+/dom-ejercicio/assets/caucasian-woman.jpg">
+    <meta property="og:url" name="twitter:url" content="https://edgarunipacifico.github.io//dom-ejercicio
+">
+
+
+</head>
+
+<body>
+  <!-- header------------------------- -->
+  <header class="header">
+    <section class="container-header">
+
+
+      <a href="https://edgarunipacifico.github.io/porfolio/portafolio-cv" rel="noopener" target="_blank">
+        <div class="logo"> </div>
+      </a>
+      <h3>Music+</h3>
+      <div class="icon-header">
+        <span class="icon-music"></span>
+        <span class="icon-volume-high"></span>
+        <span class="icon-headphones"></span>
+      </div>
+
+      <!-------------boton hanburgue-->
+      <button class="panel-btn  hamburger  hamburger--vortex-r" type="button">
+        <span class=" hamburger-box ">
+          <span class="hamburger-inner "></span>
+        </span>
+      </button>
+    </section>
+  </header>
+
+
+
+  <aside class="panel ">
+    <nav class="menu">
+
+      <a href="#seccion1" data-scroll-spy> HOME</a>
+      <a href="#seccion2" data-scroll-spy> LAS MÁS BUSCADA</a>
+      <a href="#seccion3" data-scroll-spy>LOS MÁS VISTO</a>
+      <a href="#seccion4" data-scroll-spy>ARTISTA MÁS BUSCADO</a>
+      <a href="#seccion5" data-scroll-spy>LO MAS VIRAL </a>
+      <a href="#seccion6" data-scroll-spy> CONTACTO</a>
+
+      <!-- <a href="#seccion4" data-scroll-spy> Responsive</a>
+      <a href="#seccion5" data-scroll-spy> Responsive Test</a>
+     <a href="#seccion6" data-scroll-spy> Deteccion de Dispositivo (User Agent)</a>
+    <a href="#seccion7" data-scroll-spy>Detecció de La conexíon</a>
+      <a href="#seccion8" data-scroll-spy> Deteccion Webcam</a>
+      <a href="#seccion9" data-scroll-spy> Geolocalizacion</a>
+      <a href="#seccion10" data-scroll-spy> Filtro de Busqueda</a>
+      <a href="#seccion11" data-scroll-spy> Sorteo Digital</a>
+      <a href="#seccion12" data-scroll-spy> Response Slider</a>
+      <a href="#seccion13" data-scroll-spy> Video Inteligente</a>
+
+      <a href="#seccion15" data-scroll-spy> Seccion Cinco</a>-->
+    </nav>
+  </aside>
+
+  <section id="seccion1" class="" data-scroll-spy>
+    <article class="hero-image"
+      style=" background-image:  url('./assets/img-buscador.jpg'); --hero-image-attachment: fixed;">
+      <aside class="hero-image-opacity" style="--opacity-color:var(--black-alpha-color)">
+        <div class="hero-image-content">
+
+          <h1 class=hero-image-title style="--hero-image-text-color: var(--white-color)">Las más buscadas tarareando en
+            Google
+          </h1>
+
+        </div>
+      </aside>
+    </article>
+  </section>
+
+  <main>
+
+    <section id="seccion2" class="seccion  sections" data-scroll-spy>
+
+
+      <!--reproductor-->
+      <article class="reproductor box-shadow-1 ">
+        <section class="content-display">
+          <div id="display"></div>
+          <div id="clock"> </div>
+          <aside class="time-duration">
+        
+            <div id="duration"> </div>
+            <span class="icon-clockify"></span>
+            <div id="time"> </div>
+          </aside>
+
+
+        </section>
+
+        <audio id="audio" preload="auto" tabindex="0">
+          <source src="assets/mp3/mood.mp3">
+        </audio>
+
+        <nav>
+
+          <div id="barra">
+            <div id="progreso"></div>
+          </div>
+          <div class="controlvol">
+            <span class="icon-volume-mute2  hidden" id="muted"></span>
+            <span class="icon-volume-medium" id="medium"></span>
+            <span class="icon-volume-high hidden" id="high"></span>
+            <div class="inputDiv">
+              <input id="volumen" type="range" value="0.1" min="0" max="1" step="0.1">
+            </div>
+          </div>
+
+          <div class="selector-cancion">
+            <button class="btn-prev" id="previous">
+              <span class="icon-previous"></span>
+            </button>
+            <button class="btn-muted" id="silenciar">
+              <span class="icon-volume-mute2 hidden"></span>
+              <span class="icon-speaker"></span>
+            </button>
+            <button class="btn-shuffle" id="shuffle">
+              <span class="icon-shuffle"></span>
+            </button>
+            <button class="btn-next" id="next">
+              <span class="icon-next"></span>
+            </button>
+          </div>
+
+          <button class="btn-pause hidden " id="btn-pause">
+            <span class="icon-pause1 "></span>
+          </button>
+
+          <button class="btn-play  hidden" id="btn-play">
+            <span class=" icon-play2"></span>
+          </button>
+        </nav>
+
+      </article>
+
+
+
+      <article class="container-list-track  box-shadow-1   background ">
+
+        <div>
+          <h2 class="h2">
+            Las canciones más buscadas tarareando en Google
+          </h2>
+          <input type="search" placeholder="Buscar..." class="track-filter">
+
+        </div>
+
+        <ul class="track-list">
+
+          <li>
+            <a class="playlist" href="assets/mp3/mood.mp3">
+              <figure class="card-track ">
+                <img src="./assets/img-mp3/artworks-sAA7UDCFV2Ej0Yvp-dQuw1g-t500x500.jpg" alt="mood">
+                <figcaption>
+                  Mood
+                </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>
+                    Intérprete: 24kGoldn
+                    <br>Cancion: Mood</i></b>
+                    <br></b>Lanzamiento: 26 de marzo de 2021
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/BANG.mp3">
+              <figure class="card-track box-shadow">
+                <img src="./assets/img-mp3/AJR_-_Bang!.jpg" alt="Bang!">
+                <figcaption>
+                  Bang!
+                </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Agrupación:<b><i>AJR </i></b><br>
+                    Cancion:<b><i> Bang!</i></b><br>
+                    Lanzamiento: 12 de febrero de 2020</p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Alanis_Morissette_You_Learn.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/AlanisYouLearnSingleUS.jpg" alt="You Learn">
+                <figcaption>
+                  You Learn
+                </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p id="info">Intérprete: <b><i> Alanis Morissette</i></b>
+                    <br>Cancion:<b><i> You Learn</i></b>
+                    <br>Lanzamiento: 18 de septiembre de 1999
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/7rinng.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/7rin.jpg" alt="Rings">
+                <figcaption>7 Rings </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete:<b><i> Ariana Grande</i></b>
+                    <br> Cancion: <b><i> 7 Rings</i></b>
+                    <br> Lanzamiento: 18 de enero de 2019
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/IWantItThatWay.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Backstreet Boys I Want It That Way.jpg" alt="I want it that way">
+                <figcaption>
+                  I want it that way
+                </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Backstreet Boys </i></b>
+                    <br>Cancion: <b><i>I Want It That Way</i></b>
+                    <br>Lanzamiento: 12 de abril de 1999
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/BeyoncePrettyl.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/beyonce_pretty_hurts-portada.jpg" alt="Pretty hurts">
+                <figcaption>Pretty hurts</figcaption>
+              </figure>
+
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Beyoncé</i></b>
+                    <br>Cancion:<b><i> Pretty hurts</i></b>
+                    <br>Lanzamiento: 13 de diciembre de 2013
+                  </p>
+                </div>
+              </aside>
+
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Capitalize.mp3">
+
+              <figure class="card-track">
+                <img src="./assets/img-mp3/capitalize.jpg" alt="Capitalize off pains">
+                <figcaption>Capitalize off pains</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: Big tunt
+                    <br>Cancion: <b><i>Capitalize Off Pains</i></b>
+                    <br>Lanzamiento: 7 de Septiembre 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/badguy.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/bad-guy.jpg" alt="guy">
+                <figcaption>Guy</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i> Billie eilish</i></b>
+                    <br>Cancion: <b><i>Guy</i></b>
+                    <br>Lanzamiento: 29 de marzo de 2019
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/myboy.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/myboy.jpg" alt="my boy">
+                <figcaption>My boy</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i> eilish</i></b>
+                    <br>Cancion: <b><i>My boy</i></b>
+                    <br>Lanzamiento: 28 de julio de 2017
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/ThereforeIAm.mp3">
+              <figure class="card-track">
+                <img src="assets/img-mp3/Therefore.jpg" alt="Therefore I am">
+                <figcaption>Therefore I am</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Billie eilish</i></b>
+                    <br>Cancion: <b><i>Therefore I Am</i></b>
+                    <br>Lanzamiento: 12 de noviembre de 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/lovely.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/lovelibla.jpg" alt="Lovely">
+                <figcaption>Lovely</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Billie eilish feat khalid </i></b>
+                    <br>Cancion: <b><i>Lovely</i></b>
+                    <br>Lanzamiento: 19 de abril de 2018
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/HowYouLikeThat.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/BLACKPINK How You Like That.jpg" alt="How you like that">
+                <figcaption>
+                  How you like that
+                </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete:<b><i> Blackpink</i></b>
+                    <br>Cancion: <b><i>How You Like That</i></b>
+                    <br>Lanzamiento: 26 de junio de 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/HeartOfGlas.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Blondie Heart Of Glass.jpg" alt="Heart of glass">
+                <figcaption>
+                  Heart of glass
+                </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Blondie</i></b>
+                    <br>Cancion: <b><i>Heart Of Glass</i></b>
+                    <br>Lanzamiento: 28 de enero de 1979
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Dynamite.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/dinamy.jpg" alt="track">
+                <figcaption>Dynamite</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete:BTS 방탄소년단
+                    <br>Cancion: <b><i>Dynamite</i></b>
+                    Lanzamiento: 21 de agosto de 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/BubbleGum.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/buble-gum cairo.jpg" alt="Cairo">
+                <figcaption>Bubble Gum</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: Cairo
+                    <br>Cancion:<b><i>Bubble Gum</i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Havana.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/havana.jpg" alt="Havana">
+                <figcaption>Havana</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: Camila Cabello
+                    <br> Cancion: Havana
+                    <br>Lanzamiento: 3 de agosto de 2017
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/MeganThee.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/cardi_b_wap-portada.jpg" alt="wap">
+                <figcaption>WAP</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete:<b><i> Cardi B featMegan Thee Stallion</i></b>
+                    <br>Cancion:<b> <i>WAP</i></b>
+                    <br>Lanzamiento: 7 de agosto de 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/CHROMANCE.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/CHROMANCE  Wrap Me In Plastic.jpg" alt="Wrap Me In Plastic">
+                <figcaption>Wrap Me In Plastic</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete:<b><i> Chromance</i></b>
+                    <br>Cancion: <b><i>Wrap Me In Plastic</i></b>
+                    <br>Lanzamiento: 5 de Febrero 2021
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Sofia.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/sofia.jpg" alt="Sofia">
+                <figcaption>Sofia</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p><b><i> Intérprete: Clairo</i></b>
+                    <br>Cancion: Sofia
+                    <br>Lanzamiento: 26 de julio de 2019
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/ConTusBesos.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/contusbesos.jpg" alt="Con Tus besos">
+                <figcaption>Con tus besos</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Grupo: Eslabon Armado
+                    <br>Cancion: ft tus besos
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Heather.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Conan Gray.jpg" alt="Heather">
+                <figcaption>Heather</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Conan Gray</i></b>
+                    <br>Cancion:<b> <i>Heather</i></b>
+                    <br>Lanzamiento: marzo de 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/DeepPurple.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/álbum Machine.jpg" alt="Smoke on the wate">
+                <figcaption>Smoke on the water</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Banda: <b><i>Deep Purple</i></b>
+                    <br>Cancion: <b><i>Smoke on the Water</i></b>
+                    <br>Lanzamiento: Lansada en el álbum <b><i>Machine Head en el año 1972</i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/DesperadoRihanna.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/desperado.jpg" alt="Desperado">
+                <figcaption>
+                  Desperado
+                </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Rihanna</i></b>
+                    <br>Cancion:<b><i> Desperado</i></b>
+                    <br>Lanzamiento: 9 de junio de 2017
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Happy.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/behapy.jpg" alt="be hapy">
+                <figcaption>Be happy</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>RDixie DAmelio</i></b>
+                    <br>Cancion:<b><i> Be Happy</i></b>
+                    <br>Lanzamiento: 9 de septiembre de 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/RaGod.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/emine-good.jpg" alt="Rap god explict">
+                <figcaption>Rap god explict</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Eminem</i></b>
+                    <br>Cancion:<b><i> Rap God Explicit</i></b>
+                    <br>Lanzamiento: 15 de octubre de 2013
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/In20CUBE.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/incup.jpg" alt="ENHYPEN">
+                <figcaption>Let Me In 20 CUBEt </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Grupo: <b><i>ENHYPEN 엔하이픈</i></b>
+                    <br>Cancion:<b><i> Let Me In 20 CUBEt</i></b>
+                    Lanzamiento: 30 de noviembre del 2020 como tercera pista de <b><i>Border: day one</i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/GabbyBarrettHope.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/gabiberetaHopy.jpg" alt="hopy">
+                <figcaption>I Hope </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Gabby Barrett</i></b>
+                    <br>Cancion:<b><i> I Hope</i></b>
+                    Lanzamiento: 17 de abril de 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/oinStraighIn.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Finese2tymesI.jpg" alt="Goin Straight In">
+                <figcaption>Goin Straight In </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Finese2Tymes</i></b>
+                    <br>Cancion:<b><i> Goin Straight In </i></b>
+                  <div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/ImagineDragons_Believer.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/imagidragon_belier.jpg" alt="Imagine Dragons">
+                <figcaption>Believer</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>
+                    Banda: <b><i>Imagine Dragons</i></b>
+                    <br>Cancion:<b><i>Believer</i></b>
+                    Lanzamiento: 1 de febrero de 2017, como el sencillo principal de su tercer álbum de estudio Evolved
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/James_Arthur_Trin_Wreck_Lyrics.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/james_artur.jpg" alt="Train Wreck">
+                <figcaption>Train Wreck</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>
+                    Intérprete: <b><i>James Arthur</i></b>
+                    <br>Cancion:<b><i>Train Wreckr</i></b>
+                    Lanzamiento: tema, extraído de su álbum debut Back From The Edge, lanzado en 2016
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Joe_Walsh_Lifes_Been_Good.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Joe Walsh Life s_Been_Good.jpg" alt="Train Wreck">
+                <figcaption>Train Wreck</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>
+                    Intérprete: <b><i>James Arthur</i></b>
+                    Cancion:<b><i>Train Wreckr</i></b>
+                    banda sonora de la película FM. Fue lanzada en el álbum de<b><i>Walsh</i> </b>de 1978
+                    <b><i> But Serively, Folks</i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/juices.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/lucidream.jpg" alt="Lucid Dreams">
+                <figcaption>Lucid Dreams </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Juice Wrld</i></b>
+                    <br>Cancion:<b><i>Lucid Dreams</i></b>
+                    Lanzamiento: el 4 de mayo de 2018 a través de la discográfica <b><i>Interscope</i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/The_Rapper_64kbps.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/hoy.jpg" alt="Holy">
+                <figcaption>Holy </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Justin Bieber ft Chance The Rapper</i></b>
+                    <br>Cancion:<b><i>Holy</i></b>
+                    Lanzamiento: el 18 de septiembre de 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Kendrick_Lamar.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/kendri.jpg" alt="Sing About Me">
+                <figcaption>Sing About Me.. </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Kendrick Lamar</i></b>
+                    <br>Cancion:<b><i>"Sing About Me,I'mDying of Thirst"</i></b>
+                    Lanzamiento: 2012
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/KaneBrown_What_Ifs_ft_Lauren_Alaina.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/kane_brow.jpg" alt="Lucid Dreams">
+                <figcaption>What Ifs </figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Kane Brown ft Lauren Alaina </i></b>
+                    <br>Cancion:<b><i>"What Ifs"</i></b>
+                    Lanzamiento: 2016
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Kane_Brown_Beautiful.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/biutiful.jpg" alt="Worldwie Beautiful">
+                <figcaption>Worldwide Beautiful</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Kane Brown </i></b>
+                    <br>Cancion:<b><i>"Worldwide Beautiful</i></b>
+                    Lanzamiento: junio 04, 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/sw.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/es_like_tha.jpg" alt="Be Like That">
+                <figcaption>Be Like That</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Kane Brown feat Swae Lee and Khalid </i></b>
+                    <br>Cancion:<b><i>Be Like That</i></b>
+                    Lanzamiento: July 10, 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+
+          <li>
+            <a class="playlist" href="assets/mp3/Lady_Gaga_BadRomance.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Lady_Gaga_Bad.jpg" alt="BadRomance">
+                <figcaption>Bad Romance</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Lady Gaga</i></b>
+                    <br>Cancion:<b><i>Bad Romance</i></b>
+                    Lanzamiento: 18 de noviembre de 2009
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Lady_Gaga_Bradley_Cooper_Shallow_from_AStar_Is_Born_Official_mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Cooper_Shallow.jpg" alt="BadRomance">
+                <figcaption>Shallow</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Lady Gaga y Bradley</i></b>
+                    <br>Cancion:<b><i>Shallow</i></b>
+                    Lanzamiento: es una canción para la película A Star Is Born (2018)
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Lauren_Daigle_You_Say.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Lauren_Daigle_You_Say.jpg" alt="You Say">
+                <figcaption>You Say</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Lauren Daigle</i></b>
+                    <br>Cancion:<b><i>You Say</i></b>
+                    Lanzamiento:<br>13/07/2018,como el single principal del 3er álbum Daigle, Look Up Child
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Lewis_Capaldi_Before_You_Go.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/before_your_go.jpg" alt="Before You Go">
+                <figcaption>Before You Go</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Lewis Capaldi</i></b>
+                    <br>Cancion:<b><i>Before You Go</i></b>
+                    Lanzamiento: 4to sencillo de Divinely Uninspired to a Hellish
+                    Extent.<br>19/11/2019
+
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+
+
+          <li>
+            <a class="playlist" href="assets/mp3/Lewis_Capaldi_Someone_You_Loved.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/lewis_capaldi.jpg" alt="">
+                <figcaption>Someone You Loved</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Lewis Capaldi</i></b>
+                    <br>Cancion:<b><i><br>Someone You Loved</i></b>
+
+                    Lanzamiento: 2do sencillo del disco <b><i>Divinely
+                        Uninspired to a Hellish Extent</i></b> el 8/11/2018
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/LilNasX_HOLIDAY.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/holidays.jpg" alt="holiday">
+                <figcaption>HOLIDAY</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete:
+                    <b><i>Lil Nas X</b></i>
+                    Cancion:<b><i>Holiday</i></b>
+
+                    <br> Lanzamiento: 13/11/2020 <b><i>Columbia Records</i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Lil_Nas_X_Old_TBilly_Ray_Cyrus.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/linasxfatbillyrap.jpg" alt="Old Town Road">
+                <figcaption>Old Town Road</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Lil Nas X ft Billy Ray Cyrus</i></b>
+                    <br>Cancion:<b><i><br>Old Town Road</i></b>
+                    <br> Lanzamiento: 5 de abril de 2019
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+
+          <li>
+            <a class="playlist" href="assets/mp3/Little_Mix_If_Yo_Want_My_Love_Letraen.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/lytlemix.jpg" alt="My Love">
+                <figcaption>If You Want My Love</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Agrupación
+                    Cómo se pronuncion: <b><i>Littlemix</i></b>
+                    <br>Cancion:<b><i><br>If You Want My Love</i></b>
+                    <br> Lanzamiento: El 25 de septiembre 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Cheap_Trick_If_You_Want_My_Love.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Cheaptricksingle-ifyouwantmylove.jpg" alt="My Love">
+                <figcaption>If You Want My Love</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Banda: <b><i>Cheap Trick</i></b>
+                    <br>Cancion:<b><i><br>Love Me Like You</i></b>
+                    <br> Lanzamiento: 1982 como el primer sencillo de su sexto álbum de estudio <b><i>One on One</i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Goulding_Love_Me_Like_You_Do.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/ellie-goulding_love-me-like-you-do.jpg" alt="ellie goulding love">
+                <figcaption>Love Me like You Do</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Ellie Goulding</i></b>
+                    <br>Cancion:<b><i><br>Love Me Like You</i></b>
+                    <br> Lanzamiento: banda sonora de la película Cincuenta sombras de <b><i>Grey</i></b>(2015)
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+
+          <li>
+            <a class="playlist" href="assets/mp3/despacito.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/despaito.jpg" alt="despacit">
+                <figcaption>Despacito</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: Luis<b><i>Fonsi</i></b> ft <b><i>Daddy Yankee,</i></b>
+                    <br>Cancion:<b><i><br>Despacito</i></b>
+                    <br> Lanzamiento: 12 de enero de 2017
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+          <li>
+            <a class="playlist" href="assets/mp3/hawai.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/hwaii-maluma.jpg" alt="hwaii-maluma">
+                <figcaption>Hawái</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Maluma</i></b>
+                    <br>Cancion:<b><i><br>Hawái</i></b>
+                    <br> Lanzamiento: 29 de julio de 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Chstmas_Is_You_Make_My_Wish.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Mariah-Carey.jpg" alt="carey all I wan">
+                <figcaption>All I Want for Christmas</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Mariah Carey</i></b>
+                    <br>Cancion:<b><i>All I Want for Christmas Is You</i></b>
+                    <br> Lanzamiento: 1984 distribuida por <b><i>Columbia Records</i></b>, sencillo principal del álbum
+                    Merry Christmas
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Mario_Judah_Die_Very_Rough.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/mariojuda.jpg" alt="Die Very Rough">
+                <figcaption>Die Very Rough</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Mario Judah</i></b>
+                    <br>Cancion:<b><i><br>Die Very Rough</i></b>
+                    <br> Lanzamiento: 25 junio 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Megan_Thee_Stallion_Savage.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/MeganTheeStallion.jpg" alt="Savage">
+                <figcaption>Savage</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Megan Thee Stallion</i></b>
+                    <br>Cancion:
+                    <b><i><br>Savage</i></b>
+                    <br> Lanzamiento: 6 de marzo de 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Michael_Jackson_Billie_Jean.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/michelchansobilebeng.jpg" alt="Billie Jean">
+                <figcaption>Billie Jean</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Michael Jackson</i></b>
+                    <br>Cancion:<b><i><br>Billie Jean</i></b>
+                    <br> Lanzamiento: 2 de enero de 1983 como segundo sencillo del album Thriller
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/The_Invitation_eminem_Diss_ft_Suge_Knight.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Nick-Cannon-Ft.-Suge-Knight-–-The-Invitation-Eminem-Diss.jpg"
+                  alt="The Invitation">
+                <figcaption>The nvitation</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Nick-Cannon</i></b>
+                    <br>Cancion:<b><i><br>Billie Jean</i></b>
+                    <br> Lanzamiento: 9 de diciembre de 2019, como respuesta al artículo de Eminem en Joe el Gordo y
+                    Dre's "Los lazos familiares"burlarse de
+                    Cannon.
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/OnlyLove.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Katy-Perry-–-Smile-Album-2020.jpg" alt="OnlyLove">
+                <figcaption>Only Love</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Katy Perry</i></b>
+                    <br>Cancion:<b><i><br>OnlyLove</i></b>
+                    <br> Lanzamiento:28 de agosto de 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/PanicAt_The_Disco_High.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/PATD.jpg" alt="OnlyLove">
+                <figcaption>High Hopes</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Banda: <b><i>Panic! at the Disco</i></b>
+                    <br>Cancion:<b><i><br>High Hopes</i></b>
+                    <br> Lanzamiento:Fueled by Ramen y DCD2 Records el 23 de mayo de 2018 como el segundo sencillo
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Post_Malone_Sae_Lee_Sunf.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/maxresdefault.jpg" alt="SpiderMan Into">
+                <figcaption>Sunflower</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Post Malone ft Swae Lee</i></b>
+                    <br>Cancion:<b><i><br>Sunflower</i></b>
+                    <br> 18 de octubre de 2018 a través de la discográfica Republic Records
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+
+          <li>
+            <a class="playlist" href="assets/mp3/Queen_We_Will_Rock_You_.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/queen_we_will_rock_you.jpg" alt="SpiderMan Into">
+                <figcaption>SWe Will Rock Your</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Banda: <b><i>Queen</i></b>
+                    <br>Cancion:<b><i><br>We Will Rock You</i></b>
+                    <br> lanzamiento: Fue editada por primera vez en el sexto álbum de Queen, News of the World, en 1977
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+
+          <li>
+            <a class="playlist" href="assets/mp3/Rick_Astley_Never_Gonna_Give_You_Up.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Never Gonna Give You Up.jpg" alt="Never Gonna Give You Up">
+                <figcaption>Never Gonna Give You..</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Rick Astley</i></b>
+                    <br>Cancion:<b><i><br>We Will Rock You</i></b>
+                    <br> lanzamiento: sencillo del álbum debut de Astley <b><i>henever You Need Somebody</i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Rise_Against_Swing_Life_Away.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/rise.jpg" alt="Never Gonna Give You Up">
+                <figcaption>Swing Life Away</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Rise Against</i></b>
+                    <br>Cancion:<b><i><br>Swing Life Away.</i></b>
+                    <br> lanzamiento: es un sencillo de Rise Against, el segundo de su álbum deL 2004</i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Savage_Love.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/savage-love.jpg" alt="savage ove">
+                <figcaption>Savage Love</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Jason Derulo</i></b>
+                    <br>Cancion:<b><i><br>Swing Life Away</i></b>
+                    <br> lanzamiento: 11 de junio de 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+
+          <li>
+            <a class="playlist" href="assets/mp3/senorita">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/SEÑORITA.jpg" alt="señorita">
+                <figcaption>Savage Love</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Intérprete: <b><i>Shawn Mendes</i></b>ft Camila Cabello
+                    <br>Cancion: Señorita
+                    <br> lanzamiento: 21 de junio de 2019 a través de <b><i> Island Records</i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Sista_Pro.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/01maxresdefault.jpg" alt="Eyes Blue Like">
+                <figcaption>Savage Love</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Artista: <b><i>Sista Prod</i></b>
+                    <br>Artista invitado: <b><i>Subvrbs</i></b>
+                    Álbum: <b><i>Eyes Blue Like The Atlantic</i></b>
+
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Smash_Mouth_All_Star.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Smash_Mouth_All_Star.jpg" alt="señorita">
+                <figcaption>All star</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Banda: <b><i>Smash Mouth</i></b>ft Camila Cabello
+                    <br>Cancion: All Star
+                    <br> lanzamiento: el 4 de mayo de 1999
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/The_Black_Eyed_Peas_Pump_It.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/pump.jpg" alt="he Black Eyed">
+                <figcaption>Pump It</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Banda: <b><i>Black Eyed Peas</i></b>
+                    <br>Cancion: Pump It
+                    <br> lanzamiento:último sencillo del álbum <b><i>Monkey Business </i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+
+          <li>
+            <a class="playlist" href="assets/mp3/The_Weeknd_Blinding_Lights_mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/thewekend.jpg" alt="Blinding LightsBlinding Lights">
+                <figcaption>Blinding Ligh</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Artista: <b><i>The Weeknd</i></b>
+                    <br>Cancion: Blinding Lights
+                    <br> lanzamiento: el 29/11/ 2019
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Seven_Nation_Army.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/seven.jpg " alt="Seven Nation Army">
+                <figcaption>Seven Nation Army</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Artista: <b><i>White Stripes</i></b>
+                    <br>Cancion: Seven Nation Army
+                    <br> lanzamiento: 2003 por la banda de rock alternativo y escrita por Jack White. Es la 1ra
+                    canción del álbum Elephant.
+
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Whitney_Houston_I_Wanna_Dance_With_Some_body.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/winwhuste.jpg" alt="I Wanna Dance With Some bod ">
+                <figcaption>I Wanna Dance with...</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Artista: <b><i>Whitney Houston</i></b>
+                    <br>Cancion: <b><i>I Wanna Dance with Somebody</i></b>
+                    Lanzado: 1987 y es el primer sencillo del álbum <b><i>Whitney</i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+          <li>
+            <a class="playlist" href="assets/mp3/Whitney_Houston_I_Will_Always_Love.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/Whitney_Houston_I_Will_Always_Love.jpg" alt="I Wanna Dance With Some bod ">
+                <figcaption>I Will Always Love You</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Artista: <b><i>Whitney Houston</i></b>
+                    <br>Cancion: <b><i>I Will Always Love You</i></b>
+                    Lanzado: canción para la película de 1992 <b><i>The Bodyguard</i></b>
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+
+          <li>
+            <a class="playlist" href="assets/mp3/Y2K_bbno_Lalala.mp3">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/lalala.jpg" alt="Blinding LightsBlinding Lights">
+                <figcaption>Lalala</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Artista: <b><i>Y2K ft bbno$</i></b>
+                    <br>Cancion: Blinding Lights
+                    <br> lanzamiento: 7 de junio de 2019 por Columbia Records.
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+          <li>
+            <a class="playlist" href="assets/mp3/yo_ya_novuelvo_contigo">
+              <figure class="card-track">
+                <img src="./assets/img-mp3/yanovuelvo.jpg" alt="Ying Yang Twins Wait The Whisper">
+                <figcaption>Yo ya no vuelvo contigo</figcaption>
+              </figure>
+              <aside class="card-track-info">
+                <div>
+                  <p>Artista: <b><i>Lenin Ramírez ft frupo firme</i></b>
+                    <br>Cancion: yo ya no vuelvo contigo
+                    <br> lanzamiento: 2020
+                  </p>
+                </div>
+              </aside>
+            </a>
+          </li>
+
+
+
+
+        </ul>
+      </article>
+
+
+    </section>
+
+    <section id="seccion3" class="" data-scroll-spy>
+
+      <article class="hero-image"
+        style=" background-image:  url('./assets/caucasian-woman.jpg '); --hero-image-attachment: scroll;">
+        <aside class="hero-image-opacity" style="--opacity-color:var(--black-alpha-color)">
+          <div class="hero-image-content">
+            <div class="container">
+              <h2 class="h2">Top 6 videos más vistos en yo</h2>
+
+              <article class="carousel" style="--carousel-bg-color:  va(--white-alpha-color);">
+                <input type="radio" name="slides" id="slide-1" checked>
+                <input type="radio" name="slides" id="slide-2">
+                <input type="radio" name="slides" id="slide-3">
+                <input type="radio" name="slides" id="slide-4">
+                <input type="radio" name="slides" id="slide-5">
+                <input type="radio" name="slides" id="slide-6">
+
+
+                <ul class="slides">
+
+                  <li class="slide">
+                    <div id="video-1"></div>
+                  </li>
+
+                  <li class="slide">
+                    <div id="video-2"></div>
+                  </li>
+
+                  <li class="slide">
+                    <div id="video-3"></div>
+                  </li>
+
+                  <li class="slide">
+                    <div id="video-4"></div>
+                  </li>
+
+                  <li class="slide">
+                    <div id="video-5"></div>
+                  </li>
+
+                  <li class="slide">
+                    <div id="video-6"></div>
+                  </li>
+
+                </ul>
+                <aside class="slides-nav">
+
+                  <label for="slide-1" id="dot-1"></label>
+                  <label for="slide-2" id="dot-2"></label>
+                  <label for="slide-3" id="dot-3"></label>
+                  <label for="slide-4" id="dot-4"></label>
+                  <label for="slide-5" id="dot-5"></label>
+                  <label for="slide-6" id="dot-6"></label>
+
+                </aside>
+
+              </article>
+
+            </div>
+          </div>
+        </aside>
+      </article>
+
+
+
+
+    </section>
+
+    <section id="seccion4" class="" data-scroll-spy>
+
+      <article class="flex-container">
+        <aside class="flex-item">
+
+
+
+          <h2 class="h2">Shakira, la cantante más buscada en Google </h2>
+          <p class="p1">
+            Uno asume que todo el planeta sabe y conoce las caderas honestas de Shakira, pero la realidad es que la
+            presentación de
+            la barranquillera en el Super Bowl, disparó un interés nunca antes visto, por conocer más sobre ella.
+            Dentro del listado general de los más buscados, Shaki se ubica en la séptima posición, con Joe Biden
+            ocupando
+            el primer
+            puesto, seguido de Kim Jon Un, Kamala Harris, Jacob Blake, Ryan Newman y Tom Hanks.
+          </p>
+          <p class="p1">
+            La actuación del medio tiempo en dicho evento, (el más visto en el país del norte), que se llevó a cabo el 2
+            de Febrero,
+            justo el día de su cumpleaños, la ubicó como la cantante más buscada, por encima de artistas anglo como
+            Adele,
+            Doja Cat,
+            y muchas otras.
+          </p>
+        </aside>
+        <article class="flex-item">
+          <img src="./assets/shakira1.jpg" alt="shakira" />
+
+          <div class="narrador">
+            <button id="btnarrador">
+              <span class="icon-speaker" id="span-narrar"></span>
+            </button>
+            <select id="speach-select" class="hidden">
+              <option>Elige una voz
+              <option>
+            </select>
+
+            <button class="hidden" id="speach-btn"><span class="icon-volume-medium" id="span-narrar"></span></button>
+          </div>
+        </article>
+
+      </article>
+
+      <section class="flex-container flex-row-rever ">
+        <article class="flex-item">
+          <h2 class="h">Bad Bunny ha sido el artista más escuchado de Spotify</h2>
+          <p class="p2">
+            Como cada año, Spotify ha publicado sus rankings con las canciones y artistas más escuchados del 2020. Por
+            primera vez
+            en la popular plataforma, un artista de habla hispana se ha colocado en el primer puesto a nivel mundial. Se
+            trata de
+            Bad Bunny, quien acumula más de 8 mil millones de reproducciones.
+          </p>
+          <p class="p2">
+            Bad Bunny se ha convertido en el artista más escuchado del año tanto a escala global como en España con más
+            de
+            8 mil
+            millones de reproducciones.
+          </p>
+        </article>
+        <article class="flex-item">
+          <img src="./assets/babony.jpg" alt="Bad Bunny " />
+
+        </article>
+
+
+      </section>
+
+    </section>
+
+
+
+    <section id="seccion5" class="seccion " data-scroll-spy>
+      <h2 class="h2">Los dos videos más vistos en Tik Tok</h2>
+      <article class="artiicle">
+
+
+        <div class="conten-video">
+          <video src="./assets/tiktok3.mp4" data-smart-video muted controls autoplay width="50%"></video>
+        </div>
+        <p>
+          En sólo 10 segundos saltó a la fama Bella Poarch. Es el vídeo más visto de Tik Tok de todo el año con más de
+          530
+          millones de reproducciones y 43 millones de 'me gusta'.
+          <br><br>
+          En el vídeo se puede ver a la tiktoker cantando parte de la canción 'M to de B' de Millie B con una
+          sincronización casi
+          perfecta. Posteriormente, siguió colgando vídeos de este estilo que la han coronado como la reina del 2020 en
+          Tik Tok.
+        </p>
+
+
+
+      </article>
+      <br><br><br><br><br><br><br><br><br>
+
+
+      <article class="artiicle">
+
+
+
+        <div class="conten-video">
+          <video src="./assets/tiktop6.mp4" data-smart-video muted controls autoplay width="50%"></video>
+        </div>
+        <p>
+          Jade Taylor-Ryan logró uno de los mejores videos del reto viral ‘Mr. Sandman’ que consistía en poner a bailar
+          a
+          cualquier persona o animal al ritmo de la canción ‘1954’ de The Chordettes. Su gato se llevó todos los
+          aplausos.
+        </p>
+
+
+
+      </article>
+    </section>
+
+    <section id="seccion6" class="seccion " data-scroll-spy>
+
+      <form class="contact-form">
+        <legend>Envianos tus comentarios</legend>
+        <input type="text" name="name" autofocus placeholder="Escribe tu nombre"
+          title="Nombre solo acepta letras y espacio enblancos" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+        <input type="text" name="subject" placeholder="Asunto" required title="El asunto es requerido">
+
+        <input type="email" name="email" placeholder="Escribe tu correo" title=" Formato de correo no valido" required
+          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+
+        <textarea name="comments" rows="5" cols="50" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$"
+          required title="tu comentario no puede eseder los 250 carateres"></textarea>
+        <div class="contac-form-loader none">
+          <img src="./assets/loders/circles.svg" alt="Cargando">
+
+        </div>
+        <div class="contac-form-response none">
+          <p>los datos han sido enviados</p>
+        </div>
+        <input type="submit" name="" value="Enviar">
+
+      </form>
+    </section>
+
+
+    <!----propuesta btn----->
+    <button class="scroll-top-btn ">
+      <span class="icon-angle-up "></span>
+    </button>
+
+    <button class="dark-theme-btn">
+      🌙
+    </button>
+    <!------------------------------------->
+    <!--mi propuesta <button class="theme moon   ">
+                <span class=" icon-moon"></span>
+            </button>
+            <button class="theme sun hidden">
+                <span class=" them-sun icon-wb_sunny "></span>   
+            </button>-->
+
+
+
+
+    <div class="container-footer">
+      <footer>
+        <div class="logo-footer">
+          <img src="./assets/portatil_opt.svg" alt="logo">
+        </div>
+        <div class="redes-sociales">
+          <a href="https://www.facebook.com/Govindavpurana" rel="noopener" target="_blank"><span
+              class="icon-facebook2   icon-redes-footer  fac"></span></a>
+          <a href="https://github.com/edgarunipacifico" rel="noopener" target="_blank"><span
+              class="icon-github  github icon-redes-footer"></span></a>
+          <a href="https://www.linkedin.com/in/edgar-riascos-63722679" rel="noopener" target="_blank"><span
+              class="fab fa-linkedin icon-redes-footer"></span></a>
+
+
+
+
+        </div>
+        <hr>
+        <h4><small>copyright &copy; 2021 <a href="https://edgarunipacifico.github.io/porfolio/portafolio-cv"
+              rel="noopener" target="_blank">Edgar Riascos</a> - Todos los derechos
+            reservados</small></h4>
+      </footer>
+    </div>
+  </main>
+</body>
+<script type="module" src="./js/index_don.js "></script>
+
+
+</html>
