@@ -78,7 +78,7 @@ h2 {
 .box-shadow-1 {
   box-shadow: 0.25rem 0.25rem 1rem #3e3e3f;
 }
-.background{
+.background {
   background-image: url(../assets/fondo.jpg);
   background-size: contain;
   background-position: 0 0;
@@ -92,7 +92,7 @@ h2 {
   bottom: 0;
   z-index: 9999999;
   padding: 1rem;
-  width: 100%;
+  width: 100vw;
   height: var(--header-height);
   background-color: var(--second-color);
 }
@@ -101,13 +101,14 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
 }
 .logo {
-  width: 20rem;
-  height: 3rem;
+  width: 8rem;
+  height:1rem;
 
   background-image: url(../assets/logo_cpt.svg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 .header h3 {
@@ -147,7 +148,6 @@ h2 {
 /*****************menu-hamburgue**********/
 
 .seccion {
-
   max-width: var(--container-width);
 
   margin: 0 auto;
@@ -178,9 +178,10 @@ h2 {
   position: fixed;
   z-index: 999;
   bottom: 1vh;
-  right: 1vw;
-  width: 4rem;
-  height: 4rem;
+  right : 3vw;
+  margin-left: 1rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 100%;
   padding: 0;
   display: flex;
@@ -212,24 +213,23 @@ h2 {
   display: block;
   font-size: 1.5rem;
   text-decoration: none;
-  color: var(--white-color) ;
+  color: var(--white-color);
   transition: all 0.3s ease;
 }
 
 .menu a:hover {
   font-weight: bold;
   color: var(--second-color);
-  background-color:var(--white-color);
+  background-color: var(--white-color);
 }
-
 
 /*************btn-up ***********************/
 .scroll-top-btn {
   position: fixed;
-  width: 4rem;
-  right: 1vw;
-  bottom: 12vh;
-  height: 4rem;
+  width: 3rem;
+  right: 42vw;
+  bottom: 1vh;
+  height: 3rem;
   background-color: var(--blue-alpha-color);
   border-radius: 50%;
   font-size: 1rem;
@@ -237,6 +237,7 @@ h2 {
   outline: 0;
   cursor: pointer;
   border: none;
+  margin-left: 1rem;
   transform: scale(0);
   transition: all 300ms ease;
   z-index: 9999999;
@@ -246,9 +247,9 @@ h2 {
   color: var(--white-color);
 }
 
-.hidden{
-    visibility: hidden;
-    opacity: 0;
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
 /***********them***************/
@@ -256,9 +257,9 @@ h2 {
   position: fixed;
   z-index: 99999999;
   bottom: 1vh;
-  width: 4rem;
-  right: 12vw;
-  height: 4rem;
+  width: 3rem;
+  right: 16vw;
+  height: 3rem;
   background-color: var(--blue-alpha-color);
   border-radius: 50%;
   font-size: 2rem;
@@ -266,9 +267,11 @@ h2 {
   outline: 0;
   cursor: pointer;
   border: none;
+  margin-right: 1rem;
+  margin-left: 1rem;
   transform: scale(1);
   transition: all 300ms ease;
-  margin-right: 5%;
+
 }
 
 .dark-theme-btn:hover {
@@ -284,8 +287,8 @@ h2 {
 
 .online,
 .offline {
- background-color: rgb(27, 133, 27);
- 
+  background-color: rgb(27, 133, 27);
+
   background-size: contain;
   color: #fff;
   margin: 0;
@@ -295,8 +298,7 @@ h2 {
   position: fixed;
   z-index: 300;
   top: 0;
-width: 100%;
-
+  width: 100%;
 
   font-weight: bold;
   z-index: 99999999;
@@ -328,7 +330,6 @@ width: 100%;
 }
 /*******search-filter**********/
 
-
 .filter {
   visibility: hidden;
   opacity: 0;
@@ -342,55 +343,59 @@ width: 100%;
   list-style-type: none;
 }
 /*artistas mas buscado*/
- .narrador button{
+.narrador button {
   background-color: #3e3e3f;
   width: 4rem;
   height: 4rem;
   border-radius: 100%;
   border: 2px;
 }
-.narrador button span{
-  font-size:2rem;
- margin-top: .5rem;
+.narrador button span {
+  font-size: 2rem;
+  margin-top: 0.5rem;
 }
 /***************footer**********************************************************/
 
 .container-footer footer .logo-footer {
-    text-align: center;
-  }
-  .container-footer footer .logo-footer img {
-    width: 100px;
-  }
-  .container-footer .redes-sociales {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  .container-footer footer .redes-sociales .icon-redes-footer {
-    font-size: 15px;
-    margin:10px;
-    background: rgb(230, 241, 230);
-    width: 20px;
-    height:20.5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    color: #a2a2a2;
-    bottom: 43px;
-  }
-  .container-footer footer .redes-sociales .fac:hover {
-    background: rgb(12, 63, 204);
-    color: rgb(230, 241, 230);
-  }
-  .container-footer footer .redes-sociales .github:hover {
-    background: rgb(28, 29, 28);
-    color: rgb(67, 70, 67);
-  }
-  .container-footer footer .redes-sociales .fa-linkedin:hover {
-    background: rgb(39, 86, 216);
-    color: rgb(230, 241, 230);
-  }
+  text-align: center;
+}
+.container-footer footer .logo-footer img {
+  width: 100px;
+}
+.container-footer .redes-sociales {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.container-footer footer .redes-sociales .icon-redes-footer {
+  font-size: 15px;
+  margin: 10px;
+  background: rgb(230, 241, 230);
+  width: 20px;
+  height: 20.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  color: #a2a2a2;
+  bottom: 43px;
+}
+.container-footer footer .redes-sociales .fac:hover {
+  background: rgb(12, 63, 204);
+  color: rgb(230, 241, 230);
+}
+.container-footer footer .redes-sociales .github:hover {
+  background: rgb(28, 29, 28);
+  color: rgb(67, 70, 67);
+}
+.container-footer footer .redes-sociales .fa-linkedin:hover {
+  background: rgb(39, 86, 216);
+  color: rgb(230, 241, 230);
+}
+/***********flex-item************************************************************/
+.flex-item img{
+  width: 50%;
+}
 
 /***********escritorio***********************************************************/
 @media screen and (min-width: 1024px) {
@@ -427,12 +432,8 @@ width: 100%;
   }
 
   .logo {
-    width: 20rem;
-    left: 2rem;
-  }
-  .logo a img {
-    display: inline;
-    width: 100%;
+    width: 15px;
+  
   }
 
   .header h1 {
@@ -488,18 +489,15 @@ width: 100%;
     margin: 0;
     font-size: 1rem;
     color: var(--white-color);
-    background-color:  var(--second-color);
-
+    background-color: var(--second-color);
   }
-
 
   .menu a:hover,
   .active {
     /*aplica tambien el hover a los enlances que esten dentro del munu y tengan las clase active*/
     font-weight: bold;
-   color: var(--second-color);
+    color: var(--second-color);
     background-color: var(--white-color);
-
   }
   /******btn-tema***********/
   .dark-theme-btn {
@@ -508,9 +506,10 @@ width: 100%;
   }
   /********btn-up********/
   .scroll-top-btn {
-    left: 7vw;
+   right : 1vw;
     bottom: 1vh;
     margin-left: 5px;
+    margin-right: 1rem;
   }
 
   /*****************videos******************************/
@@ -653,7 +652,6 @@ width: 100%;
     text-align: right;
     margin-left: 24vw;
     font-size: 1.5rem;
-   
   }
   .flex-item .p2 {
     text-align: left;
@@ -663,7 +661,6 @@ width: 100%;
 
   .flex-item img {
     padding: 1rem;
-   
   }
   /* .flex-order{
         order: 1;
@@ -671,7 +668,6 @@ width: 100%;
   .flex-row-rever {
     flex-direction: row-reverse;
   }
- 
 
   /*El videos más vistos en Tik****************************/
 
@@ -725,8 +721,6 @@ width: 100%;
     height: 50px;
   }
 
-
-
   .container-footer footer hr {
     margin-top: 20px;
     border: none;
@@ -768,13 +762,12 @@ width: 100%;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 .contact-form input,
 .contact-form textarea {
   font-size: 1rem;
   font-family: sans-serif;
-
 }
 
 .contact-form input[type="submit"] {
@@ -785,12 +778,12 @@ width: 100%;
   color: var(--white-color);
 }
 .contact-form textarea:focus {
- outline:none;
- box-shadow:  0 0 15px 1px  var(--first-alpha-color) ;
+  outline: none;
+  box-shadow: 0 0 15px 1px var(--first-alpha-color);
 }
 .contact-form input:focus {
- outline:none;
- box-shadow:  0 0 15px 1px  var(--first-alpha-color) ;
+  outline: none;
+  box-shadow: 0 0 15px 1px var(--first-alpha-color);
 }
 .contact-form *::placeholder {
   color: rgba(22, 52, 222, 0.609);
@@ -800,7 +793,6 @@ width: 100%;
 que tenga el atributo requierd y que so validos*/
 .contact-form [required]:valid {
   border: thin solid var(--form-ok-color);
-   
 }
 .contact-form [required]:invalid {
   border: thin solid var(--form-error-color);

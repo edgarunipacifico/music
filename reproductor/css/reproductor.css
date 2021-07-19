@@ -21,6 +21,7 @@
 body {
   margin: 0;
   overflow-x: hidden;
+ 
 }
 
 span {
@@ -39,16 +40,15 @@ span {
 /*****reproductor*****************/
 .reproductor {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   max-width: 361px;
   transform: scale(0);
-  margin: 0 auto;
+ 
   left: 1%;
   right: 1%;
-  bottom: 16vh;
+  bottom: 10vh;
   z-index: 9999;
-  min-height: 290px;
-  padding: 5px 5px 1px;
+  min-height: 218px;
   background-color: #080808c9;
   border: 1px solid #666666;
   border-radius: 10px;
@@ -66,15 +66,15 @@ span {
   transition: all 0.5s ease-in-out;
   animation: infoTrack 20s linear infinite;
   width: 90%;
-  bottom: -18.5vh;
+  bottom: -19.5vh;
   padding-bottom: 0.6rem;
   margin-bottom: 0.5rem;
 }
 #clock {
   position: fixed;
   font-family: "DS-Digital", "Orbitron", sans-serif;
-  letter-spacing: 0.5rem;
-  top: 8.9vh;
+  letter-spacing: 0.2rem;
+  top: 20px;
   left: 5%;
   right: 5%;
 
@@ -85,21 +85,22 @@ span {
 }
 .time-duration{
 
-
+  color:#fff;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  top:18vh;
+  top:49px;
 left: 50%;
 right: 50%;
 
 
 }
 .time-duration span{
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 2px;
-  color:#03a9f4
+  color:#03a9f4;
+  padding: bottom 0.5rem;
 }
 /*#duration{
   font-size: 0.8rem;
@@ -178,7 +179,7 @@ button:hover {
   background: #141313;
   border-radius: 0.5rem;
   width: 99%;
-  height: 3.2rem;
+  height: 2.2rem;
   bottom: 0.5vh;
   left: 1.5px;
   padding: 5px;
@@ -190,7 +191,7 @@ button:hover {
 }
 .btn-play .icon-play2,
 .btn-pause .icon-pause1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: var(--first-color);
   padding: 1px;
 }
@@ -248,7 +249,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 16vh;
+  bottom: 15.2vh;
   width: 98%;
 }
 .controlvol span {
@@ -382,7 +383,7 @@ li a:hover {
   border-radius: 5px;
   background: hsl(0, 80%, 60%);
   cursor: pointer;
-  bottom: 20.5vh;
+  bottom: 21vh;
   left: 2.4rem;
   padding-left: 0.1rem;
   z-index: 999999;
@@ -408,6 +409,7 @@ li a:hover {
 
 .container-list-track {
 
+width: 100vw;
 
   margin-top: 4rem;
   margin-bottom: 4rem;
