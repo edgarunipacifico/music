@@ -393,9 +393,7 @@ h2 {
   color: rgb(230, 241, 230);
 }
 /***********flex-item************************************************************/
-.flex-item img{
-  width: 50%;
-}
+
 
 /***********escritorio***********************************************************/
 @media screen and (min-width: 1024px) {
@@ -661,7 +659,7 @@ h2 {
 
   .flex-item img {
     padding: 1rem;
-    width: 100%;
+ 
   }
   /* .flex-order{
         order: 1;

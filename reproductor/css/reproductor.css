@@ -57,7 +57,6 @@ span {
 .content-display {
   position: relative;
   widows: 100%;
-
 }
 #display {
   position: absolute;
@@ -75,7 +74,7 @@ span {
   position: fixed;
   font-family: "DS-Digital", "Orbitron", sans-serif;
   letter-spacing: 0.2rem;
-  top: 20px;
+  top: 25px;
   left: 5%;
   right: 5%;
 
@@ -90,7 +89,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 49px;
+  top: 69px;
   left: 50%;
   right: 50%;
 }
@@ -100,21 +99,6 @@ span {
   color: #03a9f4;
   padding: bottom 0.5rem;
 }
-/*#duration{
-  font-size: 0.8rem;
-  position: absolute;
-  top:18vh;
-  margin: 0 auto;
-  
-  padding-bottom: 0.2rem;
-  margin-bottom: 1px;
-}
-.icon-clockify{
-  position: absolute;
-  margin: 0 auto;
-  top:19vh;
-  font-size: 1rem;
-}*/
 
 @keyframes infoTrack {
   0% {
@@ -201,7 +185,7 @@ button:hover {
   display: flex;
 
   position: absolute;
-  bottom: 7.2vh;
+  bottom: 30px;
   width: 100%;
   margin: 0 auto;
   margin-bottom: 0.7rem;
@@ -334,34 +318,6 @@ input[type="range"]::-ms-fill-upper {
 }
 /**************display**********************/
 
-/****************cargar-archivo****************************/
-
-/*.track-list {
-  background: rgba(221, 23, 195, 0.431);
-  width: 100%;
-  margin-bottom: 0;
-  margin-top: 0;
-
-  padding: 20px;
-  list-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
-a {
-  text-decoration: none;
-}
-.active a {
-  color: #5db0e6;
-  text-decoration: none;
-}
-li a {
-  color: #37df0d;
-  background: #0d0e0dd2;
-  padding: 5px;
-  display: block;
-}
-li a:hover {
-  text-decoration: none;
-}*/
 /************barra de porogreso*-******/
 .icon-play-circle-o,
 .icon-stop {
@@ -380,7 +336,7 @@ li a:hover {
   border-radius: 5px;
   background: hsl(0, 80%, 60%);
   cursor: pointer;
-  bottom: 21vh;
+  bottom: 85px;
   left: 2.4rem;
   padding-left: 0.1rem;
   z-index: 999999;
@@ -559,7 +515,7 @@ input[type="search"]:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 21vh;
+    top: 175px;
     left: 60%;
   }
 
@@ -613,9 +569,9 @@ input[type="search"]:focus {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 1rem;
+
     width: 50%;
-    left: 8rem;
+    left: 10rem;
   }
   .inputDiv {
     width: 100%;
