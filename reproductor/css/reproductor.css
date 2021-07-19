@@ -21,7 +21,6 @@
 body {
   margin: 0;
   overflow-x: hidden;
- 
 }
 
 span {
@@ -43,7 +42,7 @@ span {
   width: 100vw;
   max-width: 361px;
   transform: scale(0);
- 
+
   left: 1%;
   right: 1%;
   bottom: 10vh;
@@ -54,9 +53,11 @@ span {
   border-radius: 10px;
   transition: all 600ms ease;
 }
+
 .content-display {
   position: relative;
   widows: 100%;
+
 }
 #display {
   position: absolute;
@@ -66,7 +67,7 @@ span {
   transition: all 0.5s ease-in-out;
   animation: infoTrack 20s linear infinite;
   width: 90%;
-  bottom: -19.5vh;
+  bottom: -100px;
   padding-bottom: 0.6rem;
   margin-bottom: 0.5rem;
 }
@@ -83,23 +84,20 @@ span {
   text-shadow: 4px 4px 4px #aaa;
   color: rgb(233, 203, 203);
 }
-.time-duration{
-
-  color:#fff;
+.time-duration {
+  color: #fff;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  top:49px;
-left: 50%;
-right: 50%;
-
-
+  top: 49px;
+  left: 50%;
+  right: 50%;
 }
-.time-duration span{
+.time-duration span {
   font-size: 1rem;
   padding: 2px;
-  color:#03a9f4;
+  color: #03a9f4;
   padding: bottom 0.5rem;
 }
 /*#duration{
@@ -117,7 +115,6 @@ right: 50%;
   top:19vh;
   font-size: 1rem;
 }*/
-
 
 @keyframes infoTrack {
   0% {
@@ -408,8 +405,7 @@ li a:hover {
 /**********cards-album*********************/
 
 .container-list-track {
-
-width: 100vw;
+  width: 100vw;
 
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -419,7 +415,6 @@ width: 100vw;
   position: relative;
   top: 2rem;
   margin: 15px;
-
 }
 input[type="search"] {
   width: 50%;
@@ -559,14 +554,14 @@ input[type="search"]:focus {
     margin: 0 auto;
     top: 2vh;
   }
-  .time-duration{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top:21vh;
-  left: 60%;
-}
+  .time-duration {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 21vh;
+    left: 60%;
+  }
 
   .btn-play,
   .btn-pause {
