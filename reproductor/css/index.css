@@ -661,6 +661,7 @@ h2 {
 
   .flex-item img {
     padding: 1rem;
+    width: 100%;
   }
   /* .flex-order{
         order: 1;
