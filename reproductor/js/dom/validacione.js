@@ -3,7 +3,7 @@ const d = document;
 export default function contacFormValidations() {
   const $form = d.querySelector(".contact-form"),
     $inputs = d.querySelectorAll(".contact-form [ required ]");
- // console.log($inputs);
+  // console.log($inputs);
   /*reccoremos los input del formularios agrecando un elemento span con la clase  para mostrar los mensajes de error*/
   $inputs.forEach((input) => {
     const $span = d.createElement("span");
@@ -41,7 +41,7 @@ export default function contacFormValidations() {
   });
   //procesar formulario
   d.addEventListener("submit", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     //alert("enviando formularios");
     const $loader = d.querySelector(".contac-form-loader"),
       $response = d.querySelector(".contac-form-response");
